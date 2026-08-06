@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Web Class TJKT 1 By Group 7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="backsound" loop>
+    <source src="ashh.mp3" type="audio/mpeg">
+</audio>
+<div id="lockscreen">
+    <div class="lock-box">
+        <h2>Masukkan PIN yc 🔒 <br><span style="font-size: 0.8rem; opacity: 0.8;">(Ketik: 3301)</span></h2>
+        
+        <div class="pin-display" id="pinDisplay"></div>
+        
+        <div class="keypad-grid">
+            <button class="key-btn" onclick="tekanAngka('1')">1</button>
+            <button class="key-btn" onclick="tekanAngka('2')">2</button>
+            <button class="key-btn" onclick="tekanAngka('3')">3</button>
+            <button class="key-btn" onclick="tekanAngka('4')">4</button>
+            <button class="key-btn" onclick="tekanAngka('5')">5</button>
+            <button class="key-btn" onclick="tekanAngka('6')">6</button>
+            <button class="key-btn" onclick="tekanAngka('7')">7</button>
+            <button class="key-btn" onclick="tekanAngka('8')">8</button>
+            <button class="key-btn" onclick="tekanAngka('9')">9</button>
+            <button class="key-btn clear" onclick="hapusPIN()">C</button>
+            <button class="key-btn" onclick="tekanAngka('0')">0</button>
+        </div>
+    </div>
+</div>
+
+<div id="main-page">
+    
+    <div class="video-banner">
+        <video id="mainVideo" muted loop playsinline>
+            <source src="tk.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="tabs-menu">
+        <button class="tab-btn active" onclick="bukaTab(event, 'profile')">👤 Profile</button>
+        <button class="tab-btn" onclick="bukaTab(event, 'video-kenangan')">🎬 Video</button>
+        <button class="tab-btn" onclick="bukaTab(event, 'poto-kenangan')">📸 Pict</button>
+        <button class="tab-btn" onclick="bukaTab(event, 'medsos-creator')">🔗 Medsos</button>
+    </div>
+
+    <div class="content-area">
+        
+        <!-- PROFILE -->
+        <div id="profile" class="tab-content active">
+            <div class="profile-box">
+                <img src="goti.jpg" alt="Foto Dia" class="profile-img">
+                <h3>Yoo Guys!!!!!💜</h3>
+                <p>"What's up, man? what's up, girl? Welcome to TJKT 1"</p>
+            </div>
+
+           
+            <div class="tabs-menu" style="margin-top: 15px;">
+                <button class="tab-btn active" onclick="bukaTabSub(event, 'beranda')">Beranda</button>
+                <button class="tab-btn" onclick="bukaTabSub(event, 'daftar-siswa')">Siswa</button>
+                <button class="tab-btn" onclick="bukaTabSub(event, 'daftar-guru')">Guru</button>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <!-- Beranda -->
+                <div id="beranda" class="sub-tab-content active">
+                    <div class="news-beranda">
+                        <div class="header-tengah">
+                            <div style="text-align: center; padding: 20px 20px 10px 20px;">
+                                <h1 style="font-size: 28px; font-weight: bold; margin-bottom: 10px;">Kelas TJKT 1 Berbasis Industri</h1>
+                                <p style="font-size: 13px; color: #555; letter-spacing: 1px;">AKADEMIK & KEGIATAN KELAS</p>
+                            </div>
+                        </div>
+                        
+                        <img src="goti.jpg" alt="Foto Bersama Kelas" class="news-featured-img" style="width:100%; border-radius:12px; margin: 10px 0;">
+                        
+                        <div class="news-lead" style="margin-top: 15px; line-height: 1.6;">
+                            Kelas TJKT 1 merupakan kelompok siswa yang dikenal dengan sikap serius dan disiplin dalam menjalani proses pembelajaran. Dengan fokus utama pada bidang jaringan komputer, setiap anggota kelas terus mengembangkan kemampuan teknis serta pengalaman praktik untuk menghadapi dunia industri. We don’t just learn the theory, but we also build, practice, and solve real problems.<br><br>
+                            Website ini dibuat sebagai media portofolio untuk menampilkan berbagai proyek dan hasil pembelajaran yang telah dikerjakan. It serves as a platform to showcase our growth, skills, and achievements in the field of computer networking, sekaligus menjadi bukti kesiapan kami untuk melangkah ke dunia kerja.
+                        </div>
+
+                        <div class="news-section-title" style="margin-top: 20px; font-weight:600;">📰 Journey to Graduation</div>
+                        <div class="news-article-card" style="background:rgba(255,255,255,0.7); padding:15px; border-radius:10px; margin-top:10px;">
+                            <span class="date" style="font-size:0.75rem; color:#888;">📅 Tahun 2026</span>
+                            <h4 style="font-size:0.9rem; color:#6d597a; margin-top: 5px;">Persiapan Uji Kompetisi (UJIKOM)</h4>
+                            <p style="font-size:0.8rem; margin-bottom: 10px;">UJIKOM (Uji Kompetensi) merupakan ujian praktik yang bertujuan untuk mengukur kemampuan siswa sesuai dengan keahlian jurusan. This exam focuses on students’ practical skills and evaluates their readiness to face real-world industry challenges.</p>
+
+                            <span class="date" style="font-size:0.75rem; color:#888;">📅 Tahun 2026</span>
+                            <h4 style="font-size:0.9rem; color:#6d597a; margin-top: 5px;">Persiapan Tes Kemampuan Akademik (TKA)</h4>
+                            <p style="font-size:0.8rem; margin-bottom: 10px;">TKA (Tes Kemampuan Akademik) merupakan ujian yang bertujuan untuk mengukur kemampuan siswa dalam memahami materi pelajaran secara teori. This test evaluates students’ academic understanding and readiness as they prepare for graduation and future challenges.</p>
+
+                            <span class="date" style="font-size:0.75rem; color:#888;">📅 Tahun 2027</span>
+                            <h4 style="font-size:0.9rem; color:#6d597a; margin-top: 5px;">Persiapan Praktik Kerja Lapangan (PKL)</h4>  
+                            <p style="font-size:0.8rem;">PKL (Praktik Kerja Lapangan) merupakan kegiatan pembelajaran di dunia industri yang bertujuan untuk meningkatkan pengalaman dan kesiapan siswa dalam menghadapi dunia kerja.</p>
+                        </div>
+                    </div>
+                    
+                    <section class="values" style="margin-top: 20px;">
+                        <h2 style="font-size: 1.2rem; margin-bottom: 10px;">Keunggulan Kelas Berbasis Industri</h2>
+                        <div class="value-list">
+                            <div class="value-item">
+                                <span>💻</span>
+                                <p>Fokus IT & Jaringan</p>
+                            </div>
+                            <div class="value-item">
+                                <span>🔧</span>
+                                <p>Praktik Langsung</p>
+                            </div>
+                            <div class="value-item">
+                                <span>🤝</span>
+                                <p>Kerja Sama Tim</p>
+                            </div>
+                            <div class="value-item">
+                                <span>👍✌</span>
+                                <p>Siap Kerja Industri</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="team" style="margin-top: 20px;">
+                        <h2 style="font-size: 1.2rem; margin-bottom: 10px;">Created By</h2>
+                        <div class="team-list">
+                            <div class="team-item">Dwi Nururl Umayah</div>
+                            <div class="team-item">Endang Wardana</div>
+                            <div class="team-item">Fardan Nurdiansyah</div>
+                            <div class="team-item">Moch. Arya Sugalih</div>
+                            <div class="team-item">Zahidah Pauziah</div>
+                        </div>
+                    </section>
+                </div>
+             
+                <!-- DaFTar Siswa -->
+                <div id="daftar-siswa" class="sub-tab-content" style="display:none;">
+                    <h3 style="font-family: 'Playfair Display', serif; color: #6d597a; margin-bottom: 15px; text-align: center;">Daftar Siswa 👥</h3>
+                    <div class="member-grid">
+                        <div class="member-card">
+                            <img src="din.jpg" alt="Siswa" class="member-img">
+                            <h4>Adinda Nurhikmah</h4>
+                            <p>Absen: 01</p>
+                            <p>Tgl Lahir: 12 July 2009</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="adit.jpg" alt="Siswa" class="member-img">
+                            <h4>Aditya Prawira Anwar</h4>
+                            <p>Absen: 02</p>
+                            <p>Tgl Lahir: 19 Mei 2009</p>
+                                               
+                        </div>
+                    </div>
+                     <div class="member-grid">
+                        <div class="member-card">
+                            <img src="alpiano.jpg" alt="Siswa" class="member-img">
+                            <h4>Alfiano Junitama</h4>
+                            <p>Absen: 03</p>
+                            <p>Tgl Lahir: 30 Juni 2009</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="mel.jpg" alt="Siswa" class="member-img">
+                            <h4>Amel Maelani</h4>
+                            <p>Absen: 04</p>
+                            <p>Tgl Lahir: 21 February 2009</p>
+                                               
+                        </div>
+                    </div>
+                     <div class="member-grid">
+                        <div class="member-card">
+                            <img src="awal.jpg" alt="Siswa" class="member-img">
+                            <h4>Awaludin</h4>
+                            <p>Absen: 05</p>
+                            <p>Tgl Lahir: 24 April 2009</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="chandra.jpg" alt="Siswa" class="member-img">
+                            <h4>Chandra Dwi Purwanto</h4>
+                            <p>Absen: 06</p>
+                            <p>Tgl Lahir: 13 Mei 2008</p>
+                                               
+                        </div>
+                    </div>
+                     <div class="member-grid">
+                        <div class="member-card">
+                            <img src="dap.jpg" alt="Siswa" class="member-img">
+                            <h4>Davin Yogi Setiawan</h4>
+                            <p>Absen: 07</p>
+                            <p>Tgl Lahir: 25 Desember 2009</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="may6.jpg" alt="Siswa" class="member-img">
+                            <h4>Dwi Nurul Umayah</h4>
+                            <p>Absen: 08</p>
+                            <p>Tgl Lahir: 20 April 2009</p>
+                                               
+                        </div>
+                    </div>
+                    <div class="member-grid">
+                        <div class="member-card">
+                            <img src="endang.jpg" alt="Siswa" class="member-img">
+                            <h4>Endang Wardana</h4>
+                            <p>Absen: 09</p>
+                            <p>Tgl Lahir: 26 July 2008</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="faiz.jpg" alt="Siswa" class="member-img">
+                            <h4>Faiz Mukhamad Kaysah</h4>
+                            <p>Absen: 10</p>
+                            <p>Tgl Lahir: 25 February 2009</p>
+                                               
+                        </div>
+                    </div>
+                     <div class="member-grid">
+                        <div class="member-card">
+                            <img src="nes.jpg" alt="Siswa" class="member-img">
+                            <h4>Fanesah</h4>
+                            <p>Absen: 11</p>
+                            <p>Tgl Lahir: 24 Mei 2009</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="got.jpg" alt="Siswa" class="member-img">
+                            <h4>Fardan Nurdiansyah</h4>
+                            <p>Absen: 12</p>
+                            <p>Tgl Lahir: 12 July 2009</p>
+                                               
+                        </div>
+                    </div>
+                     <div class="member-grid">
+                        <div class="member-card">
+                            <img src="parhan.jpg" alt="Siswa" class="member-img">
+                            <h4>Farkhan Rizqi Aufa</h4>
+                            <p>Absen: 13</p>
+                            <p>Tgl Lahir: 09 April 2009</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="pir2.jpg" alt="Siswa" class="member-img">
+                            <h4>Firda Reva Syifa'ah</h4>
+                            <p>Absen: 14</p>
+                            <p>Tgl Lahir: 30 July 2009</p>
+                                               
+                        </div>
+                    </div>
+                     <div class="member-grid">
+                        <div class="member-card">
+                            <img src="je.jpg" alt="Siswa" class="member-img">
+                            <h4>Ihza Maulana Nurkhotib</h4>
+                            <p>Absen: 15</p>
+                            <p>Tgl Lahir: 12 July 2009</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="rara.jpg" alt="Siswa" class="member-img">
+                            <h4>Inggried Zahra Husaini</h4>
+                            <p>Absen: 16</p>
+                            <p>Tgl Lahir: 10 September 2009</p>
+                                               
+                        </div>
+                    </div>
+                    <div class="member-grid">
+                        <div class="member-card">
+                            <img src="azam.jpg" alt="Siswa" class="member-img">
+                            <h4>M. Zacky Chairul Azzam</h4>
+                            <p>Absen: 17</p>
+                            <p>Tgl Lahir: 11 Agustus 2009</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="got.jpg" alt="Siswa" class="member-img">
+                            <h4>Moch. Arya Sugalih</h4>
+                            <p>Absen: 18</p>
+                            <p>Tgl Lahir: 12 July 2009</p>
+                                               
+                        </div>
+                    </div>
+                     <div class="member-grid">
+                        <div class="member-card">
+                            <img src="hasan (2).jpg" alt="Siswa" class="member-img">
+                            <h4>Muhammad Hasan Najmi</h4>
+                            <p>Absen: 19</p>
+                            <p>Tgl Lahir: 31 Agustus 2009</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="hilman.jpg" alt="Siswa" class="member-img">
+                            <h4>Muhammad Hilman Azzam</h4>
+                            <p>Absen: 20</p>
+                            <p>Tgl Lahir: 09 October 2008</p>
+                                               
+                        </div>
+                    </div>
+                     <div class="member-grid">
+                        <div class="member-card">
+                            <img src="li.jpg" alt="Siswa" class="member-img">
+                            <h4>Muhammad Bahali</h4>
+                            <p>Absen: 21</p>
+                            <p>Tgl Lahir: 11 Desember 2008</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="sil.jpg" alt="Siswa" class="member-img">
+                            <h4>Muhammad Bashil Mukhlis</h4>
+                            <p>Absen: 22</p>
+                            <p>Tgl Lahir: 07 Maret 2009</p>
+                                               
+                        </div>
+                    </div>
+                     <div class="member-grid">
+                        <div class="member-card">
+                            <img src="je.jpg" alt="Siswa" class="member-img">
+                            <h4>Muhammad Lutfi</h4>
+                            <p>Absen: 23</p>
+                            <p>Tgl Lahir: 12 July 2009</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="nurul.jpg" alt="Siswa" class="member-img">
+                            <h4>Nurul Nazmi Aulia</h4>
+                            <p>Absen: 24</p>
+                            <p>Tgl Lahir: 7 Maret 2009</p>
+                                               
+                        </div>
+                    </div><div class="member-grid">
+                        <div class="member-card">
+                            <img src="je.jpg" alt="Siswa" class="member-img">
+                            <h4>Panji Hafiz Khaurani</h4>
+                            <p>Absen: 25</p>
+                            <p>Tgl Lahir: 12 July 2009</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="reza.jpg" alt="Siswa" class="member-img">
+                            <h4>Rama Nur Fareza</h4>
+                            <p>Absen: 26</p>
+                            <p>Tgl Lahir: 11 Agustus 2009</p>
+                                               
+                        </div>
+                    </div>
+                     <div class="member-grid">
+                        <div class="member-card">
+                            <img src="raya.jpg" alt="Siswa" class="member-img">
+                            <h4>Raya Eka Zahira</h4>
+                            <p>Absen: 27</p>
+                            <p>Tgl Lahir: 08 Desember 2008</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="refan.jpg" alt="Siswa" class="member-img">
+                            <h4>Refan Kaesa Febriana Putra</h4>
+                            <p>Absen: 28</p>
+                            <p>Tgl Lahir: 17 February 2009</p>
+                                               
+                        </div>
+                    </div>
+                     <div class="member-grid">
+                        <div class="member-card">
+                            <img src="je.jpg" alt="Siswa" class="member-img">
+                            <h4>Rizafa Nur Ramadhan Guswat</h4>
+                            <p>Absen: 29</p>
+                            <p>Tgl Lahir: 12 July 2009</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="shaka.jpg" alt="Siswa" class="member-img">
+                            <h4>Saka Fauzan</h4>
+                            <p>Absen: 30</p>
+                            <p>Tgl Lahir: 5 February 2009</p>
+                                               
+                        </div>
+                    </div>
+                     <div class="member-grid">
+                        <div class="member-card">
+                            <img src="sri.jpg" alt="Siswa" class="member-img">
+                            <h4>Sri Hidayanti</h4>
+                            <p>Absen: 31</p>
+                            <p>Tgl Lahir: 28 October 2008</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="ci.jpg" alt="Siswa" class="member-img">
+                            <h4>Suci Wulan Sari</h4>
+                            <p>Absen: 32</p>
+                            <p>Tgl Lahir: 29 Agustus 2009</p>
+                                               
+                        </div>
+                    </div>
+                    <div class="member-grid">
+                        <div class="member-card">
+                            <img src="je.jpg" alt="Siswa" class="member-img">
+                            <h4>Syahrul Maulidi Alkaf</h4>
+                            <p>Absen: 33</p>
+                            <p>Tgl Lahir: 12 July 2009</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="wid.jpg" alt="Siswa" class="member-img">
+                            <h4>Widia Sari</h4>
+                            <p>Absen: 34</p>
+                            <p>Tgl Lahir: 20 Juni 2009</p>
+                                               
+                        </div>
+                    </div>
+                     <div class="member-grid">
+                        <div class="member-card">
+                            <img src="zai3.jpg" alt="Siswa" class="member-img">
+                            <h4>Zahidah Pauziah</h4>
+                            <p>Absen: 35</p>
+                            <p>Tgl: 15 October 2008</p>
+                        </div>
+                        <div class="member-card">
+                            <img src="zahra(1).jpg" alt="Siswa" class="member-img">
+                            <h4>Zahra Cantika Putri</h4>
+                            <p>Absen: 36</p>
+                            <p>Tgl Lahir: 26 October 2008</p>
+                                               
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- DaF Guru -->
+                <div id="daftar-guru" class="sub-tab-content" style="display:none;">
+                    <h3 style="font-family: 'Playfair Display', serif; color: #6d597a; margin-bottom: 15px; text-align: center;">Guru Pembimbing 👨‍🏫</h3>
+                    <div class="member-grid">
+                        <div class="member-card">
+                            <img src="jeju.jpg" alt="Guru" class="member-img">
+                            <h4>Pak Arief Budiman, S.Pd</h4>
+                            <p>Jabatan: Guru Kelas<br>Mapel: Produktif TJKT</p>
+                        </div>
+                         <div class="member-card">
+                            <img src="jeju.jpg" alt="Guru" class="member-img">
+                            <h4>Pak Arie Wibowo, S.Kom</h4>
+                            <p>Jabatan: Wali Kelas<br>Mapel: Produktif TJKT</p>
+                        </div>
+                         <div class="member-card">
+                            <img src="jeju.jpg" alt="Guru" class="member-img">
+                            <h4>Pak Adang Somantri, P., S.Pd</h4>
+                            <p>Jabatan: Guru Kelas<br>Mapel: Produktif TJKT</p>
+                        </div>
+                         <div class="member-card">
+                            <img src="jeju.jpg" alt="Guru" class="member-img">
+                            <h4>Pak Hermanto, S.Kom</h4>
+                            <p>Jabatan: Guru Kelas<br>Mapel: Produktif TJKT</p>
+                        </div>
+                         <div class="member-card">
+                            <img src="jeju.jpg" alt="Guru" class="member-img">
+                            <h4>Ibu Isna Kholidazia, S.Pd</h4>
+                            <p>Jabatan: Guru Kelas<br>Mapel: PPKn</p>
+                        </div>
+                         <div class="member-card">
+                            <img src="jeju.jpg" alt="Guru" class="member-img">
+                            <h4>Pak Ahmad Labib, S.Pd.I</h4>
+                            <p>Jabatan: Guru Kelas<br>Mapel: Pai</p>
+                        </div>
+                         <div class="member-card">
+                            <img src="jeju.jpg" alt="Guru" class="member-img">
+                            <h4>Pak Anang Sujana, S.Pd</h4>
+                            <p>Jabatan: Guru Kelas<br>Mapel: B.Indonesia</p>
+                        </div>
+                         <div class="member-card">
+                            <img src="jeju.jpg" alt="Guru" class="member-img">
+                            <h4>Pak Diyanto, S.Pd</h4>
+                            <p>Jabatan: Guru Kelas<br>Mapel: B.Inggris</p>
+                        </div>
+                         <div class="member-card">
+                            <img src="jeju.jpg" alt="Guru" class="member-img">
+                            <h4>Ibu Dini Sukmawaty, S.Pd</h4>
+                            <p>Jabatan: Guru Kelas<br>Mapel: Matematika</p>
+                        </div>
+                         <div class="member-card">
+                            <img src="jeju.jpg" alt="Guru" class="member-img">
+                            <h4>Ibu Ade Herlina, S.Pd</h4>
+                            <p>Jabatan: Guru Kelas<br>Mapel: Ekologi</p>
+                        </div>
+                         
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+       
+        <!-- VIDEO -->
+        <div id="video-kenangan" class="tab-content">
+            <div style="background: white; padding: 12px; border-radius: 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
+                <p style="font-size: 0.85rem; margin-bottom: 10px; font-weight: 600; color: #6d597a;">Memories Box 🍿</p>
+                <video controls width="100%" style="border-radius: 10px; margin-bottom: 10px;"><source src="jek.mp4" type="video/mp4"></video>
+                <video controls width="100%" style="border-radius: 10px; margin-bottom: 10px;"><source src="great.mp4" type="video/mp4"></video>
+                <video controls width="100%" style="border-radius: 10px; margin-bottom: 10px;"><source src="jk.mp4" type="video/mp4"></video>
+                <video controls width="100%" style="border-radius: 10px; margin-bottom: 10px;"><source src="kn.mp4" type="video/mp4"></video>
+                <video controls width="100%" style="border-radius: 10px; margin-bottom: 10px;"><source src="nice.mp4" type="video/mp4"></video>
+                <video controls width="100%" style="border-radius: 10px;"><source src="ze.mp4" type="video/mp4"></video>
+            </div>
+        </div>
+       
+        <!-- PICT -->
+        <div id="poto-kenangan" class="tab-content">
+            <div class="photo-grid">
+                <img src="oc.jpg" class="photo-item" alt="Foto 1">
+                <img src="od.jpg" class="photo-item" alt="Foto 2">
+                <img src="oe.jpg" class="photo-item" alt="Foto 3">
+                <img src="of.jpg" class="photo-item" alt="Foto 4">
+                <img src="og.jpg" class="photo-item" alt="Foto 5">
+                <img src="oh.jpg" class="photo-item" alt="Foto 6">
+                <img src="oj.jpg" class="photo-item" alt="Foto 7">
+                <img src="ok.jpg" class="photo-item" alt="Foto 8">
+                <img src="ol.jpg" class="photo-item" alt="Foto 9">
+                <img src="om.jpg" class="photo-item" alt="Foto 10">
+                <img src="on(1).jpg" class="photo-item" alt="Foto 11">
+                <img src="op.jpg" class="photo-item" alt="Foto 12">
+                <img src="oq.jpg" class="photo-item" alt="Foto 13">
+                <img src="os.jpg" class="photo-item" alt="Foto 14">
+                <img src="ou.jpg" class="photo-item" alt="Foto 15">
+                <img src="ov.jpg" class="photo-item" alt="Foto 16">
+                <img src="ow.jpg" class="photo-item" alt="Foto 17">
+                <img src="ox.jpg" class="photo-item" alt="Foto 18">
+                <img src="oz.jpg" class="photo-item" alt="Foto 20">
+                <img src="qa.jpg" class="photo-item" alt="Foto 21">
+                <img src="qb.jpg" class="photo-item" alt="Foto 22">
+                <img src="qd.jpg" class="photo-item" alt="Foto 23">
+                <img src="qe.jpg" class="photo-item" alt="Foto 24">
+                <img src="qea(1).jpg" class="photo-item" alt="Foto 25">
+                <img src="qed.jpg" class="photo-item" alt="Foto 27">
+                <img src="qef.jpg" class="photo-item" alt="Foto 28">
+                <img src="qeg.jpg" class="photo-item" alt="Foto 29">
+                <img src="qeh.jpg" class="photo-item" alt="Foto 30">
+                <img src="qei.jpg" class="photo-item" alt="Foto 31">
+                <img src="qej.jpg" class="photo-item" alt="Foto 32">
+                <img src="qek.jpg" class="photo-item" alt="Foto 33">
+                <img src="qeo.jpg" class="photo-item" alt="Foto 34">
+                <img src="qep.jpg" class="photo-item" alt="Foto 36">
+                <img src="qeq.jpg" class="photo-item" alt="Foto 37">
+                <img src="qer.jpg" class="photo-item" alt="Foto 38">
+                <img src="qert.jpg" class="photo-item" alt="Foto 39">
+                <img src="qes.jpg" class="photo-item" alt="Foto 40">
+                <img src="qesk.jpg" class="photo-item" alt="Foto 41">
+                <img src="qet.jpg" class="photo-item" alt="Foto 42">
+                <img src="qeu.jpg" class="photo-item" alt="Foto 43">
+                <img src="qey.jpg" class="photo-item" alt="Foto 44">
+                <img src="qez.jpg" class="photo-item" alt="Foto 45">
+                <img src="qf.jpg" class="photo-item" alt="Foto 46">
+                <img src="qh.jpg" class="photo-item" alt="Foto 47">
+                <img src="qi.jpg" class="photo-item" alt="Foto 48">
+                <img src="qj.jpg" class="photo-item" alt="Foto 49">
+                <img src="qk.jpg" class="photo-item" alt="Foto 50">
+                <img src="ql.jpg" class="photo-item" alt="Foto 51">
+                <img src="qm.jpg" class="photo-item" alt="Foto 52">
+                <img src="qn.jpg" class="photo-item" alt="Foto 53">
+                <img src="qo.jpg" class="photo-item" alt="Foto 54">
+                <img src="qp.jpg" class="photo-item" alt="Foto 55">
+            <img src="qr.jpg" class="photo-item" alt="Foto 56">
+                 <img src="qrq.jpg" class="photo-item" alt="Foto 57">
+                <img src="qs.jpg" class="photo-item" alt="Foto 58">
+                <img src="qt.jpg" class="photo-item" alt="Foto 59">
+                <img src="qu.jpg" class="photo-item" alt="Foto 60">
+                <img src="qw.jpg" class="photo-item" alt="Foto 61">
+                <img src="qwa.jpg" class="photo-item" alt="Foto 62">
+                <img src="qwb.jpg" class="photo-item" alt="Foto 63">
+                <img src="qwc.jpg" class="photo-item" alt="Foto 64">
+                <img src="qwd.jpg" class="photo-item" alt="Foto 65">
+                <img src="qwe.jpg" class="photo-item" alt="Foto 66">
+                <img src="qwf.jpg" class="photo-item" alt="Foto 67">
+                <img src="qwg.jpg" class="photo-item" alt="Foto 68">
+                <img src="qwh.jpg" class="photo-item" alt="Foto 69">
+                <img src="qwi.jpg" class="photo-item" alt="Foto 70">
+            <img src="qwj.jpg" class="photo-item" alt="Foto 71">
+                <img src="qwk.jpg" class="photo-item" alt="Foto 72">
+                <img src="qwl.jpg" class="photo-item" alt="Foto 73">
+                <img src="qwn.jpg" class="photo-item" alt="Foto 75">
+                <img src="qwo.jpg" class="photo-item" alt="Foto 76">
+                <img src="qwp.jpg" class="photo-item" alt="Foto 77">
+                <img src="qwq.jpg" class="photo-item" alt="Foto 78">
+                <img src="qwr.jpg" class="photo-item" alt="Foto 79">
+                <img src="qws.jpg" class="photo-item" alt="Foto 80">
+                <img src="qwt.jpg" class="photo-item" alt="Foto 81">
+                <img src="qwu.jpg" class="photo-item" alt="Foto 82">
+                <img src="qwv.jpg" class="photo-item" alt="Foto 83">
+                <img src="qww.jpg" class="photo-item" alt="Foto 84">
+                <img src="qwx.jpg" class="photo-item" alt="Foto 85">
+            <img src="qwy.jpg" class="photo-item" alt="Foto 86">
+            <img src="qwz.jpg" class="photo-item" alt="Foto 87">
+                <img src="qx.jpg" class="photo-item" alt="Foto 88">
+                <img src="qy.jpg" class="photo-item" alt="Foto 89">
+                <img src="qz.jpg" class="photo-item" alt="Foto 90">
+            </div>
+        </div>
+
+        
+        <div id="medsos-creator" class="tab-content">
+            <div class="creator-container">
+                <div class="medsos-box">
+                    <h3 class="section-title">Media Sosial Kelas</h3>
+                    <p class="section-desc">Don't forget to visit, yuk kunjungi dan support terus sosial media kelas kita!</p>
+                    <div class="medsos-buttons">
+                        <a href="https://youtube.com/@tjktonela?si=97UnINuM9Byxtiaf" target="_blank" class="medsos-btn yt">
+                            <span>▶️</span> YouTube Kelas
+                        </a>
+                        <a href="https://www.instagram.com/t.ttelrecoin__?igsh=MWZxc3F4cHJjbnkydQ==" target="_blank" class="medsos-btn ig">
+                            <span>📸</span> Instagram Kelas
+                        </a>
+                    </div>
+                </div>
+
+                <div class="divider-line"></div>
+
+                <h3 class="section-title" style="text-align: center;">Profil Pembuat Web</h3>
+                <p class="section-desc" style="text-align: center;">What’s up! This is the team behind this website💚</p>
+
+                <div class="creator-profile-card">
+                    <img src="maya.jpg" alt="Foto Pembuat" class="creator-img">
+                    <h4 class="creator-name">Dwi Nurul Umayah</h4>
+                    <p class="creator-role">Content Research Team</p>
+                    <div class="creator-details">
+                        <span>Tgl Lahir: 20 April 2009</span>
+                    </div>
+                </div>
+
+                <div class="creator-profile-card">
+                    <img src="je.jpg" alt="Foto Pembuat" class="creator-img">
+                    <h4 class="creator-name">Endang Wardana</h4>
+                    <p class="creator-role">Content Research Team</p>
+                    <div class="creator-details">
+                        <span>Tgl Lahir: 25 Desember 2008</span>
+                    </div>
+                </div>
+
+                 <div class="creator-profile-card">
+                    <img src="goti.jpg" alt="Foto Pembuat" class="creator-img">
+                    <h4 class="creator-name">Fardan Nurdiansyah</h4>
+                    <p class="creator-role">Content Research Team</p>
+                    <div class="creator-details">
+                        <span>Tgl Lahir: 17 Agustus 2008</span>
+                    </div>
+                </div>
+
+                 <div class="creator-profile-card">
+                    <img src="goti.jpg" alt="Foto Pembuat" class="creator-img">
+                    <h4 class="creator-name">Moch. Arya Sugalih</h4>
+                    <p class="creator-role">Video Editor</p>
+                    <div class="creator-details">
+                        <span>Tgl Lahir: 17 Agustus 2008</span>
+                    </div>
+                </div>
+
+                 <div class="creator-profile-card">
+                    <img src="zai.jpg" alt="Foto Pembuat" class="creator-img">
+                    <h4 class="creator-name">Zahidah Pauziah</h4>
+                    <p class="creator-role">Web Coder</p>
+                    <div class="creator-details">
+                        <span>Tgl Lahir: 15 October 2008</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
