@@ -21,74 +21,76 @@
     </div>
 </div>
 
-
 </div>
 
 <div id="main-page">
-
-<div class="video-banner">
-    <video id="mainVideo" muted loop playsinline>
-        <source src="tk.mp4" type="video/mp4">
-    </video>
-</div>
-
-<div class="tabs-menu">
-    <button class="tab-btn active" onclick="bukaTab(event, 'profile')">👤 Profile</button>
-    <button class="tab-btn" onclick="bukaTab(event, 'video-kenangan')">🎬 Video</button>
-    <button class="tab-btn" onclick="bukaTab(event, 'poto-kenangan')">📸 Pict</button>
-    <button class="tab-btn" onclick="bukaTab(event, 'medsos-creator')">🔗 Medsos</button>
-</div>
-
-<div class="content-area">
     
-    <!-- PROFILE -->
-    <div id="profile" class="tab-content active">
-        <div class="profile-box">
-            <img src="goti.jpg" alt="Foto Dia" class="profile-img">
-            <h3>Yoo Guys!!!!!💜</h3>
-            <p>"What's up, man? what's up, girl? Welcome to TJKT 1"</p>
-        </div>
+    <!-- MENU UTAMA -->
+    <div class="tabs-menu">
+        <button class="tab-btn active" onclick="bukaTab(event, 'profile')">👤 Profile</button>
+        <button class="tab-btn" onclick="bukaTab(event, 'video-kenangan')">🎬 Video</button>
+        <button class="tab-btn" onclick="bukaTab(event, 'poto-kenangan')">📸 Pict</button>
+        <button class="tab-btn" onclick="bukaTab(event, 'medsos-creator')">🔗 Medsos</button>
+    </div>
 
-       
-        <div class="tabs-menu" style="margin-top: 15px;">
-            <button class="tab-btn active" onclick="bukaTabSub(event, 'beranda')">Beranda</button>
-            <button class="tab-btn" onclick="bukaTabSub(event, 'daftar-siswa')">Siswa</button>
-            <button class="tab-btn" onclick="bukaTabSub(event, 'daftar-guru')">Guru</button>
-        </div>
+    <!-- MENU KEDUA -->
+    <div class="sub-tabs-menu">
+        <button class="tab-btn active" onclick="bukaTabSub(event, 'beranda')">🏠 Beranda</button>
+        <button class="tab-btn" onclick="bukaTabSub(event, 'daftar-siswa')">🏆 Siswa</button>
+        <button class="tab-btn" onclick="bukaTabSub(event, 'daftar-guru')">👨‍🏫 Guru</button>
+    </div>
 
-        <div style="margin-top: 15px;">
-            <!-- Beranda -->
-            <div id="beranda" class="sub-tab-content active">
-                <div class="news-beranda">
-                    <div class="header-tengah">
-                        <div style="text-align: center; padding: 20px 20px 10px 20px;">
-                            <h1 style="font-size: 28px; font-weight: bold; margin-bottom: 10px;">Kelas TJKT 1 Berbasis Industri</h1>
-                            <p style="font-size: 13px; color: #555; letter-spacing: 1px;">AKADEMIK & KEGIATAN KELAS</p>
+    <!-- BANNER / VIDEO -->
+    <div class="video-banner">
+        <video id="mainVideo" muted loop playsinline>
+            <source src="tk.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="content-area">
+        
+        <!-- PROFILE -->
+        <div id="profile" class="tab-content active">
+            <div class="profile-box">
+                <img src="goti.jpg" alt="Foto Dia" class="profile-img">
+                <h3>Yoo Guys!!!!!💜</h3>
+                <p>"What's up, man? what's up, girl? Welcome to TJKT 1"</p>
+            </div>
+
+           
+            <div style="margin-top: 15px;">
+                <!-- Beranda -->
+                <div id="beranda" class="sub-tab-content active">
+                    <div class="news-beranda">
+                        <div class="header-tengah">
+                            <div style="text-align: center; padding: 20px 20px 10px 20px;">
+                                <h1 style="font-size: 28px; font-weight: bold; margin-bottom: 10px;">Kelas TJKT 1 Berbasis Industri</h1>
+                                <p style="font-size: 13px; color: #555; letter-spacing: 1px;">AKADEMIK & KEGIATAN KELAS</p>
+                            </div>
+                        </div>
+                        
+                        <img src="goti.jpg" alt="Foto Bersama Kelas" class="news-featured-img" style="width:100%; border-radius:12px; margin: 10px 0;">
+                        
+                        <div class="news-lead" style="margin-top: 15px; line-height: 1.6;">
+                            Kelas TJKT 1 merupakan kelompok siswa yang dikenal dengan sikap serius dan disiplin dalam menjalani proses pembelajaran. Dengan fokus utama pada bidang jaringan komputer, setiap anggota kelas terus mengembangkan kemampuan teknis serta pengalaman praktik untuk menghadapi dunia industri. We don’t just learn the theory, but we also build, practice, and solve real problems.<br><br>
+                            Website ini dibuat sebagai media portofolio untuk menampilkan berbagai proyek dan hasil pembelajaran yang telah dikerjakan. It serves as a platform to showcase our growth, skills, and achievements in the field of computer networking, sekaligus menjadi bukti kesiapan kami untuk melangkah ke dunia kerja.
+                        </div>
+
+                        <div class="news-section-title" style="margin-top: 20px; font-weight:600;">📰 Journey to Graduation</div>
+                        <div class="news-article-card" style="background:rgba(255,255,255,0.7); padding:15px; border-radius:10px; margin-top:10px;">
+                            <span class="date" style="font-size:0.75rem; color:#888;">📅 Tahun 2026</span>
+                            <h4 style="font-size:0.9rem; color:#6d597a; margin-top: 5px;">Persiapan Uji Kompetisi (UJIKOM)</h4>
+                            <p style="font-size:0.8rem; margin-bottom: 10px;">UJIKOM (Uji Kompetensi) merupakan ujian praktik yang bertujuan untuk mengukur kemampuan siswa sesuai dengan keahlian jurusan. This exam focuses on students’ practical skills and evaluates their readiness to face real-world industry challenges.</p>
+
+                            <span class="date" style="font-size:0.75rem; color:#888;">📅 Tahun 2026</span>
+                            <h4 style="font-size:0.9rem; color:#6d597a; margin-top: 5px;">Persiapan Tes Kemampuan Akademik (TKA)</h4>
+                            <p style="font-size:0.8rem; margin-bottom: 10px;">TKA (Tes Kemampuan Akademik) merupakan ujian yang bertujuan untuk mengukur kemampuan siswa dalam memahami materi pelajaran secara teori. This test evaluates students’ academic understanding and readiness as they prepare for graduation and future challenges.</p>
+
+                            <span class="date" style="font-size:0.75rem; color:#888;">📅 Tahun 2027</span>
+                            <h4 style="font-size:0.9rem; color:#6d597a; margin-top: 5px;">Persiapan Praktik Kerja Lapangan (PKL)</h4>  
+                            <p style="font-size:0.8rem;">PKL (Praktik Kerja Lapangan) merupakan kegiatan pembelajaran di dunia industri yang bertujuan untuk meningkatkan pengalaman dan kesiapan siswa dalam menghadapi dunia kerja.</p>
                         </div>
                     </div>
-                    
-                    <img src="goti.jpg" alt="Foto Bersama Kelas" class="news-featured-img" style="width:100%; border-radius:12px; margin: 10px 0;">
-                    
-                    <div class="news-lead" style="margin-top: 15px; line-height: 1.6;">
-                        Kelas TJKT 1 merupakan kelompok siswa yang dikenal dengan sikap serius dan disiplin dalam menjalani proses pembelajaran. Dengan fokus utama pada bidang jaringan komputer, setiap anggota kelas terus mengembangkan kemampuan teknis serta pengalaman praktik untuk menghadapi dunia industri. We don’t just learn the theory, but we also build, practice, and solve real problems.<br><br>
-                        Website ini dibuat sebagai media portofolio untuk menampilkan berbagai proyek dan hasil pembelajaran yang telah dikerjakan. It serves as a platform to showcase our growth, skills, and achievements in the field of computer networking, sekaligus menjadi bukti kesiapan kami untuk melangkah ke dunia kerja.
-                    </div>
-
-                    <div class="news-section-title" style="margin-top: 20px; font-weight:600;">📰 Journey to Graduation</div>
-                    <div class="news-article-card" style="background:rgba(255,255,255,0.7); padding:15px; border-radius:10px; margin-top:10px;">
-                        <span class="date" style="font-size:0.75rem; color:#888;">📅 Tahun 2026</span>
-                        <h4 style="font-size:0.9rem; color:#6d597a; margin-top: 5px;">Persiapan Uji Kompetisi (UJIKOM)</h4>
-                        <p style="font-size:0.8rem; margin-bottom: 10px;">UJIKOM (Uji Kompetensi) merupakan ujian praktik yang bertujuan untuk mengukur kemampuan siswa sesuai dengan keahlian jurusan. This exam focuses on students’ practical skills and evaluates their readiness to face real-world industry challenges.</p>
-
-                        <span class="date" style="font-size:0.75rem; color:#888;">📅 Tahun 2026</span>
-                        <h4 style="font-size:0.9rem; color:#6d597a; margin-top: 5px;">Persiapan Tes Kemampuan Akademik (TKA)</h4>
-                        <p style="font-size:0.8rem; margin-bottom: 10px;">TKA (Tes Kemampuan Akademik) merupakan ujian yang bertujuan untuk mengukur kemampuan siswa dalam memahami materi pelajaran secara teori. This test evaluates students’ academic understanding and readiness as they prepare for graduation and future challenges.</p>
-
-                        <span class="date" style="font-size:0.75rem; color:#888;">📅 Tahun 2027</span>
-                        <h4 style="font-size:0.9rem; color:#6d597a; margin-top: 5px;">Persiapan Praktik Kerja Lapangan (PKL)</h4>  
-                        <p style="font-size:0.8rem;">PKL (Praktik Kerja Lapangan) merupakan kegiatan pembelajaran di dunia industri yang bertujuan untuk meningkatkan pengalaman dan kesiapan siswa dalam menghadapi dunia kerja.</p>
-                    </div>
-                </div>
                 
                 <section class="values" style="margin-top: 20px;">
                     <h2 style="font-size: 1.2rem; margin-bottom: 10px;">Keunggulan Kelas Berbasis Industri</h2>
