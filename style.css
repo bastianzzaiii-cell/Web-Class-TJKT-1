@@ -170,6 +170,7 @@ body {
   background: #000;
   flex-shrink: 0;
   overflow: hidden;
+  border-bottom: 3px solid rgb(137, 116, 129);
 }
 
 .video-banner video {
